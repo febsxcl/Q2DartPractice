@@ -1,0 +1,22 @@
+void main() {
+  double balance = 2500.0;
+  double depositAmount = 500.0;
+  double withdrawalAmount = 300.0;
+
+  print('      (ATM BALANCE CHECKER)      ');
+  print('Initial Balance: ₱${balance.toStringAsFixed(2)}');
+
+  balance += depositAmount;
+  print('\nDeposited: ₱${depositAmount.toStringAsFixed(2)}');
+  print('Balance after deposit: ₱${balance.toStringAsFixed(2)}');
+
+  if (withdrawalAmount <= balance) {
+    balance -= withdrawalAmount;
+    print('\nWithdrawn: ₱${withdrawalAmount.toStringAsFixed(2)}');
+    print('Balance after withdrawal: ₱${balance.toStringAsFixed(2)}');
+  } else {
+    print('\nWithdrawal failed: Insufficient balance.');
+  }
+
+  print('\nFinal Balance: ₱${balance.toStringAsFixed(2)}');
+}
